@@ -86,7 +86,42 @@ public void rotateleft_l_left(){
         l1[2][1] = '.';
         value_left=0;
         }
-
+    }
+public void rotateleft_l_right(){
+switch(value_right){
+        //L mirando abajo
+        case 0:
+        char[][] t1=new char[4][4];
+        t1[0][0] = '.';
+        t1[0][1] = '.';
+        t1[0][2] = '.';
+        t1[1][2] = '.';
+        value_right=1;
+        //L mirando al costado
+        case 1:
+        char[][] t2=new char[4][4];
+        t2[0][1] = '.';
+        t2[1][1] = '.';
+        t2[2][1] = '.';
+        t2[0][2] = '.';
+        value_right=2;
+        //L mirando arriba
+        case 2:
+        char[][] t3=new char[4][4];
+        t3[0][0] = '.';
+        t3[1][0] = '.';
+        t3[1][1] = '.';
+        t3[1][2] = '.';
+        value_right=3;
+        //L de nuevo normal
+        case 3:
+        char[][] l2= new char[4][4];
+        l2[0][3] = '.';
+        l2[1][3] = '.';
+        l2[2][3] = '.';
+        l2[2][2] = '.';
+        value_right=0;
+        }
     }
 }
 /*  formas xd
@@ -113,7 +148,7 @@ public void rotateleft_l_left(){
         l1[2][1] = '.';
 
 
-        L.left
+        L.right
         L mirando abajo
         t1[0][0] = '.';
         t1[0][1] = '.';
@@ -133,5 +168,5 @@ public void rotateleft_l_left(){
         l2[0][3] = '.';
         l2[1][3] = '.';
         l2[2][3] = '.';
-        l2[2][2] = '.'
+        l2[2][2] = '.';
  */
