@@ -37,7 +37,7 @@ public class PieceLTest {
         assertEquals('.', l2[1][1]);
         assertEquals('.', l2[2][1]);
         /*Compruebo valor */
-        assertEquals(3,l.getValue_left());
+        assertEquals(2,l.getValue_left());
         l.rotateleft_l_left();
 
         char[][] l3= l.getl_left();

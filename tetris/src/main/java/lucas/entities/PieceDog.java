@@ -58,6 +58,7 @@ public void rotate_left_dogl(){
         d3[0][1] = '.';
         dog_left=d3;
         valuel=1;
+        break;
         case 1:
         char[][] d4 = new char[4][4];
         // Dibuja al perro vertical de nuevo
@@ -67,6 +68,7 @@ public void rotate_left_dogl(){
         d4[0][1] = '.';
         dog_left=d4;
         valuel=0;
+        break;
                 }
         }
 public void rotate_left_dogr(){
@@ -81,6 +83,7 @@ public void rotate_left_dogr(){
         d4[2][3] = '.';
         dog_right=d4;
         valued=0;
+        break;
         case 0:
         char[][] d2 = new char[4][4];
         // Dibuja la pieza en forma de "Dog" horientado a la derecha"
@@ -90,6 +93,7 @@ public void rotate_left_dogr(){
         d2[1][2] = '.';
         dog_right=d2;
         valued=1;
+        break;
                 }
         }
 

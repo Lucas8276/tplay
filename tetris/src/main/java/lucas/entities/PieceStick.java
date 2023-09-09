@@ -18,7 +18,7 @@ public class PieceStick {
         piece_stick[3][0] = '.';
         value=1;
         }
-        public char[][]getPiecet(){
+        public char[][]getPieceS(){
                 return piece_stick;
         }
         public int getValue(){
