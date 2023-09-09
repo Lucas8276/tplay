@@ -97,6 +97,7 @@ public class Piecet {
         t5[1][1] = '.';
         piecet= t5;
         value=4;
+        break;
         /*t de nuevo en posicion normal */
         case 4:
         char[][] t6 = new char[4][4];
@@ -106,6 +107,7 @@ public class Piecet {
         t6[0][2] = '.';
         piecet= t6;
         value=1;
+        break;
     }
     }
 }

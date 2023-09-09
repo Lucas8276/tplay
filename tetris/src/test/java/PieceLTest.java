@@ -58,10 +58,13 @@ public class PieceLTest {
         assertEquals('.', l4[1][0]);
         /*Compruebo valor */
         assertEquals(4,l.getValue_left());
-
+        l.rotateleft_l_left();
         char[][] l5= l.getl_left();
         /*Compruebo matriz */
-        
+        assertEquals('.', l5[0][0]);
+        assertEquals('.', l5[1][0]);
+        assertEquals('.', l5[2][0]);
+        assertEquals('.', l5[2][1]);
         /*Compruebo valor */
         assertEquals(0,l.getValue_left());
 
