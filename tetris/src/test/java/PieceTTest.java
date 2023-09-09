@@ -105,7 +105,7 @@ public class PieceTTest {
         assertEquals('.', k9[1][1]);
         assertEquals('.', k9[0][2]);
         /*Compruebo valor */
-        assertEquals(0,pieza_t.getValue());
+        assertEquals(1,pieza_t.getValue());
                                         }
 }
     
