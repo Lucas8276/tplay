@@ -12,8 +12,7 @@ public class Prueba_xd {
         t1[0][0] = '.';
         t1[1][0] = '.';
         t1[2][0] = '.';
-        t1[2][1] = '.';
-
+        t1[1][1] = '.';
 
 
         // Imprime la matriz

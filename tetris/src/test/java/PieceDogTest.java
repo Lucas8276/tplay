@@ -10,7 +10,7 @@ import org.junit.Test;
 import lucas.entities.PieceDog;
 public class PieceDogTest {
     @Test
-    public void testObtenerFormaDog(){
+    public void testObtenerFormaDogizq(){
         PieceDog p1= new PieceDog();
         char[][] p2= p1.getDogL();
         /*Dog a la izquierda */
@@ -34,9 +34,31 @@ public class PieceDogTest {
         assertEquals('.',p3[0][1]);
         /*Compruebo valor */
         assertEquals(1,p1.getValuel());
+    }
+    @Test
+    public void testObtenerFormaDogDer(){
+        PieceDog p1= new PieceDog();
+        char[][] p2= p1.getDogL();
+        /*Dog a la izquierda */
+        /*Compruebo Matriz*/
+        assertEquals('.',p2[0][0]);
+        assertEquals('.',p2[0][1]);
+        assertEquals('.',p2[1][1]);
+        assertEquals('.',p2[1][2]);
+        /*Compruebo valor */
+        assertEquals(0,p1.getValuel());
 
+        /*Ahora roto */
+        p1.rotate_right_dogl();
 
-
-
+        char[][] p3= p1.getDogL();
+        /*Dog a la izquierda */
+        /*Compruebo Matriz*/
+        assertEquals('.',p3[1][0]);
+        assertEquals('.',p3[2][0]);
+        assertEquals('.',p3[1][1]);
+        assertEquals('.',p3[0][1]);
+        /*Compruebo valor */
+        assertEquals(1,p1.getValuel());
     }
 }

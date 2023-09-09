@@ -66,7 +66,48 @@ public class Piecet {
         value=1;
     }
     }
-
+    public void rotate_right(){
+        switch(value){
+        /*t a la derecha */
+        case 1:
+        char[][] t3 = new char[4][4];
+        t3[0][2]= '.';
+        t3[1][2]= '.';
+        t3[2][2]= '.';
+        t3[1][1]= '.';
+        piecet= t3;
+        value=2;
+        break;
+        /*t orientada abajo */
+        case 2:
+        char[][] t4 = new char[4][4];
+        t4[1][0] = '.';
+        t4[1][1] = '.';
+        t4[1][2] = '.';
+        t4[0][1] = '.';
+        piecet= t4;
+        value=3;
+        break;
+        /*t orientada  a la izq */
+        case 3:
+        char[][] t5 = new char[4][4];
+        t5[0][0] = '.';
+        t5[1][0] = '.';
+        t5[2][0] = '.';
+        t5[1][1] = '.';
+        piecet= t5;
+        value=4;
+        /*t de nuevo en posicion normal */
+        case 4:
+        char[][] t6 = new char[4][4];
+        t6[0][0] = '.';
+        t6[0][1] = '.';
+        t6[1][1] = '.';
+        t6[0][2] = '.';
+        piecet= t6;
+        value=1;
+    }
+    }
 }
 
 

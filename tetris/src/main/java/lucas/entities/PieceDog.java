@@ -6,7 +6,7 @@ private int valuel;
 private char[][]dog_right;
 private int valued;
 public  PieceDog() {
-         dog_left = new char[4][4];
+        dog_left = new char[4][4];
         //Rellena la matriz
         for (int i = 0; i < 4; i++) {
         for (int j = 0; j < 4; j++) {
@@ -92,6 +92,57 @@ public void rotate_left_dogr(){
         d2[1][1] = '.';
         d2[1][2] = '.';
         dog_right=d2;
+        valued=1;
+        break;
+                }
+        }
+
+        public void rotate_right_dogl(){
+        switch(valuel){
+               //Perro a la izquierda
+        case 1:
+        char[][] d5 = new char[4][4];
+        // Dibuja la pieza en forma de "Dog"  horientado a la izquierda"
+        d5[0][2] = '.';
+        d5[1][3] = '.';
+        d5[1][2] = '.';
+        d5[2][3] = '.';
+        dog_right=d5;
+        valued=0;
+        break;
+        case 0:
+        char[][] d6 = new char[4][4];
+        // Dibuja la pieza en forma de "Dog" horientado a la derecha"
+        d6[0][3] = '.';
+        d6[0][2] = '.';
+        d6[1][1] = '.';
+        d6[1][2] = '.';
+        dog_right=d6;
+        valued=1;
+        break; 
+        }
+        }
+        public void rotate_right_dogr(){
+        switch(valued){
+        //Perro a la izquierda
+        case 1:
+        char[][] d8 = new char[4][4];
+        // Dibuja la pieza en forma de "Dog"  horientado a la izquierda"
+        d8[0][2] = '.';
+        d8[1][3] = '.';
+        d8[1][2] = '.';
+        d8[2][3] = '.';
+        dog_right=d8;
+        valued=0;
+        break;
+        case 0:
+        char[][] d9 = new char[4][4];
+        // Dibuja la pieza en forma de "Dog" horientado a la derecha"
+        d9[0][3] = '.';
+        d9[0][2] = '.';
+        d9[1][1] = '.';
+        d9[1][2] = '.';
+        dog_right=d9;
         valued=1;
         break;
                 }

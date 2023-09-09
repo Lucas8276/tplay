@@ -48,5 +48,28 @@ public class PieceStick {
                 break;
                 }
         }
-        
+        public void rotate_right(){
+                switch(value){
+                /*Stick horizontal */
+                case 1:
+                char[][] t2 = new char[4][4];
+                t2[0][0]= '.';
+                t2[0][1]= '.';
+                t2[0][2]= '.';
+                t2[0][3]= '.';
+                piece_stick=t2;
+                value=2;
+                break;
+                /*stick vertical*/
+                case 2:
+                char[][] t1 = new char[4][4];
+                t1[0][0]= '.';
+                t1[1][0]= '.';
+                t1[2][2]= '.';
+                t1[0][3]= '.';
+                piece_stick=t1;
+                value=1;
+                break;
+                }
+        }
 }

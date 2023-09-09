@@ -39,4 +39,26 @@ public void rotate_left(){
         break;
     }
 }
+public void rotate_right(){
+    switch(value){
+        /*Cuadrado volteado xd */
+        case 0:
+        char[][] t1= new char[4][4];
+        t1[0][0]='.';
+        t1[1][0]='.';
+        t1[0][1]='.';
+        t1[1][1]='.';
+        value=1;
+        break;
+        case 1:
+        char[][] t2= new char[4][4];
+        t2[0][0]='.';
+        t2[1][0]='.';
+        t2[0][1]='.';
+        t2[1][1]='.';
+        value=0;
+        break;
+    }
+}
+
 }

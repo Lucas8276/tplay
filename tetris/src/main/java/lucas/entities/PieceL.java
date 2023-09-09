@@ -83,8 +83,17 @@ public void rotateleft_l_left(){
         l_left=t3;
         value_left=3;
         break;
-        //L de nuevo normal
         case 3:
+        char[][] l9= new char[4][4];
+        l9[0][0] = '.';
+        l9[0][1] = '.';
+        l9[0][2] = '.';
+        l9[1][0] = '.';
+        l_left=l9;
+        value_left=4;
+        break;
+        //L de nuevo normal
+        case 4:
         char[][] l1= new char[4][4];
         l1[0][0] = '.';
         l1[1][0] = '.';
@@ -127,6 +136,7 @@ switch(value_right){
         value_right=3;
         l_right=t3;
         break;
+        
         //L de nuevo normal
         case 3:
         char[][] l2= new char[4][4];
@@ -139,6 +149,103 @@ switch(value_right){
         break;
         }
     }
+    public void rotateright_l_left(){
+        switch(value_left){
+        case 0:
+        char[][] t1=new char[4][4];
+        t1[0][0] = '.';
+        t1[0][1] = '.';
+        t1[0][2] = '.';
+        t1[1][0] = '.';
+        l_left=t1;
+        value_left=1;
+        break;
+        //L mirando al costado
+        case 1:
+        char[][] t2=new char[4][4];
+        t2[0][0] = '.';
+        t2[0][1] = '.';
+        t2[1][1] = '.';
+        t2[2][1] = '.';
+        l_left=t2;
+        value_left=2;
+        break;
+        //L mirando abajo
+        case 2:
+        char[][] t3=new char[4][4];
+        t3[0][2] = '.';
+        t3[1][1] = '.';
+        t3[1][2] = '.';
+        t3[1][0] = '.';
+        l_left=t3;
+        value_left=3;
+        break;
+        case 3:
+        char[][] l9= new char[4][4];
+        l9[0][0] = '.';
+        l9[0][1] = '.';
+        l9[0][2] = '.';
+        l9[1][0] = '.';
+        l_left=l9;
+        value_left=4;
+        break;
+        //L de nuevo normal
+        case 4:
+        char[][] l1= new char[4][4];
+        l1[0][0] = '.';
+        l1[1][0] = '.';
+        l1[2][0] = '.';
+        l1[2][1] = '.';
+        l_left=l1;
+        value_left=0;
+        break;
+        }
+}
+public void rotateright_l_right(){
+switch(value_right){
+        //L 
+        case 0:
+        char[][] t1=new char[4][4];
+        t1[0][1] = '.';
+        t1[1][1] = '.';
+        t1[1][2] = '.';
+        t1[1][3] = '.';
+        value_right=1;
+        l_right=t1;
+        break;
+        //L mirando al costado
+        case 1:
+        char[][] t2=new char[4][4];
+        t2[0][1] = '.';
+        t2[0][0] = '.';
+        t2[1][0] = '.';
+        t2[2][0] = '.';
+        value_right=2;
+        l_right=t2;
+        break;
+        //L mirando arriba
+        case 2:
+        char[][] t3=new char[4][4];
+        t3[0][1] = '.';
+        t3[0][2] = '.';
+        t3[0][3] = '.';
+        t3[1][3] = '.';
+        value_right=3;
+        l_right=t3;
+        break;
+        
+        //L de nuevo normal
+        case 3:
+        char[][] l2= new char[4][4];
+        l2[0][3] = '.';
+        l2[1][3] = '.';
+        l2[2][3] = '.';
+        l2[2][2] = '.';
+        value_right=0;
+        l_right=l2;
+        break;
+        }
+}
 }
 /*  formas xd
         Lright
