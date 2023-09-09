@@ -60,6 +60,7 @@ public void rotateleft_l_left(){
         t1[1][1] = '.';
         t1[1][2] = '.';
         t1[0][2] = '.';
+        l_left=t1;
         value_left=1;
         //L mirando al costado
         case 1:
@@ -68,6 +69,7 @@ public void rotateleft_l_left(){
         t2[0][1] = '.';
         t2[1][1] = '.';
         t2[2][1] = '.';
+        l_left=t2;
         value_left=2;
         //L mirando abajo
         case 2:
@@ -76,6 +78,7 @@ public void rotateleft_l_left(){
         t3[0][1] = '.';
         t3[0][2] = '.';
         t3[1][0] = '.';
+        l_left=t3;
         value_left=3;
         //L de nuevo normal
         case 3:
@@ -84,6 +87,7 @@ public void rotateleft_l_left(){
         l1[1][0] = '.';
         l1[2][0] = '.';
         l1[2][1] = '.';
+        l_left=l1;
         value_left=0;
         }
     }
