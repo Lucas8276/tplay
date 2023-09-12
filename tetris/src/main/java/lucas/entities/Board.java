@@ -63,11 +63,11 @@ public class Board {
     // Método para agregar una matriz 4x4 existente en una posición aleatoria
     public static void agregarMatrizAleatoria(int[][] matrix10x20, int[][] matrix4x4) {
         Random random = new Random();
-        int startX = random.nextInt(10);  // Rango de 0 a 9 para evitar desbordar la matriz
-        int startY = random.nextInt(20); // Rango de 0 a 19
+        int startX = random.nextInt(9);  // Rango de 0 a 9 para evitar desbordar la matriz
+        int startY = random.nextInt(19); // Rango de 0 a 19
 
         // Verificar que la matriz 4x4 cabe en la matriz 10x20
-        if (startX + 2 < 10 && startY + 2 < 20) {
+        if (startX + 2 < 9 && startY + 2 < 19) {
             for (int i = 0; i < 4; i++) {
                 System.arraycopy(matrix4x4[i], 0, matrix10x20[startX + i], startY, 4);
             }

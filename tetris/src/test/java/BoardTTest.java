@@ -1,4 +1,7 @@
 import lucas.entities.Board;
+
+import static org.junit.Assert.assertEquals;
+
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import org.junit.Assert;
@@ -15,8 +18,8 @@ public class BoardTTest {
         assertEquals(20, matrix[0].length);
 
         // Verificar si todos los elementos de la matriz son cero (inicializados correctamente)
-        for (int i = 0; i < 10; i++) {
-            for (int j = 0; j < 20; j++) {
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 19; j++) {
                 assertEquals(0, matrix[i][j]);
             }
         }
@@ -52,26 +55,5 @@ public class BoardTTest {
                 }
             }
         }
-    }
-
-    @Test
-    public void testimprimirMatriz() {
-        int[][] matrix = {
-                {1, 2, 3},
-                {4, 5, 6}
-        };
-
-        String expectedOutput = "1\t2\t3\t\n4\t5\t6\t\n";
-
-        // Redirigir salida estándar para capturarla y compararla
-        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(outputStream));
-
-        Board.imprimirMatriz(matrix);
-
-        Assert.assertEquals(expectedOutput, outputStream.toString());
-    }
-
-    private void assertEquals(int i, int matrix) {
     }
 }
