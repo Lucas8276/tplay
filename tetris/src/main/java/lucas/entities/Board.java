@@ -67,7 +67,88 @@ public class Board {
         int startY = random.nextInt(19); // Rango de 0 a 19
 
         // Verificar que la matriz 4x4 cabe en la matriz 10x20
-        if (startX + 2 < 9 && startY + 2 < 19) {
+        if (startX + 2 < 5 && startY + 2 < 4) {
+            for (int i = 0; i < 4; i++) {
+                System.arraycopy(matrix4x4[i], 0, matrix10x20[startX + i], startY, 4);
+            }
+        } else {
+            System.out.println("La matriz 4x4 no cabe en la matriz 10x20 en esta posición.");
+        }
+
+
+        if (startX + 2 < 9 && startY + 2 < 4) {
+            for (int i = 0; i < 4; i++) {
+                System.arraycopy(matrix4x4[i], 0, matrix10x20[startX + i], startY, 4);
+            }
+        } else {
+            System.out.println("La matriz 4x4 no cabe en la matriz 10x20 en esta posición.");
+        }
+
+
+        if (startX + 2 < 5 && startY + 2 < 8) {
+            for (int i = 0; i < 4; i++) {
+                System.arraycopy(matrix4x4[i], 0, matrix10x20[startX + i], startY, 4);
+            }
+        } else {
+            System.out.println("La matriz 4x4 no cabe en la matriz 10x20 en esta posición.");
+        }
+
+
+        if (startX + 2 < 9 && startY + 2 < 4) {
+            for (int i = 0; i < 4; i++) {
+                System.arraycopy(matrix4x4[i], 0, matrix10x20[startX + i], startY, 4);
+            }
+        } else {
+            System.out.println("La matriz 4x4 no cabe en la matriz 10x20 en esta posición.");
+        }
+
+
+        if (startX + 2 < 5 && startY + 2 < 4) {
+            for (int i = 0; i < 4; i++) {
+                System.arraycopy(matrix4x4[i], 0, matrix10x20[startX + i], startY, 4);
+            }
+        } else {
+            System.out.println("La matriz 4x4 no cabe en la matriz 10x20 en esta posición.");
+        }
+
+
+        if (startX + 2 < 9 && startY + 2 < 12) {
+            for (int i = 0; i < 4; i++) {
+                System.arraycopy(matrix4x4[i], 0, matrix10x20[startX + i], startY, 4);
+            }
+        } else {
+            System.out.println("La matriz 4x4 no cabe en la matriz 10x20 en esta posición.");
+        }
+
+
+        if (startX + 2 < 5 && startY + 2 < 4) {
+            for (int i = 0; i < 4; i++) {
+                System.arraycopy(matrix4x4[i], 0, matrix10x20[startX + i], startY, 4);
+            }
+        } else {
+            System.out.println("La matriz 4x4 no cabe en la matriz 10x20 en esta posición.");
+        }
+
+
+        if (startX + 2 < 9 && startY + 2 < 16) {
+            for (int i = 0; i < 4; i++) {
+                System.arraycopy(matrix4x4[i], 0, matrix10x20[startX + i], startY, 4);
+            }
+        } else {
+            System.out.println("La matriz 4x4 no cabe en la matriz 10x20 en esta posición.");
+        }
+
+
+        if (startX + 2 < 5 && startY + 2 < 4) {
+            for (int i = 0; i < 4; i++) {
+                System.arraycopy(matrix4x4[i], 0, matrix10x20[startX + i], startY, 4);
+            }
+        } else {
+            System.out.println("La matriz 4x4 no cabe en la matriz 10x20 en esta posición.");
+        }
+
+
+        if (startX + 2 < 9 && startY + 2 < 20) {
             for (int i = 0; i < 4; i++) {
                 System.arraycopy(matrix4x4[i], 0, matrix10x20[startX + i], startY, 4);
             }
