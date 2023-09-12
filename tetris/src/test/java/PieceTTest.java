@@ -10,6 +10,7 @@ import org.junit.Test;
 
 import lucas.entities.Piecet;
 public class PieceTTest {
+    
     @Test
     public void testObtenerFormaizq() {
         Piecet pieza_t = new Piecet();
@@ -68,7 +69,7 @@ public class PieceTTest {
         
         /*Compruebo valor */
         assertEquals(1,pieza_t.getValue());
-        /*Ahora Roto a la izquierda */
+        /*Ahora Roto a la derecha */
         pieza_t.rotate_right();
         char[][] k2= pieza_t.getPiecet();
         /*Compruebo matriz */
@@ -77,7 +78,7 @@ public class PieceTTest {
         assertEquals('.', k2[2][2]);
         assertEquals('.', k2[1][1]);
         /*Compruebo valor */
-        assertEquals(2,pieza_t.getValue());
+        assertEquals(4,pieza_t.getValue());
         /*Ahora roto a la izquierda */
         pieza_t.rotate_right();
         char[][] k3= pieza_t.getPiecet();
@@ -96,7 +97,7 @@ public class PieceTTest {
         assertEquals('.', k7[2][0]);
         assertEquals('.', k7[1][1]);
         /*Compruebo valor */
-        assertEquals(4,pieza_t.getValue());
+        assertEquals(2,pieza_t.getValue());
         pieza_t.rotate_right();
         char[][] k9= pieza_t.getPiecet();
         /*Compruebo matriz */
@@ -107,6 +108,29 @@ public class PieceTTest {
         /*Compruebo valor */
         assertEquals(1,pieza_t.getValue());
                                         }
+        @Test
+        public void testObtenerFormader_izq_norm(){
+        Piecet pieza_t = new Piecet();
+        /*Ahora Roto a la izquierda */
+        pieza_t.rotate_left();
+        char[][] k2= pieza_t.getPiecet();
+        /*Compruebo matriz */
+        assertEquals('.', k2[0][3]);
+        assertEquals('.', k2[1][3]);
+        assertEquals('.', k2[2][3]);
+        assertEquals('.', k2[1][2]);
+        /*Compruebo valor */
+        assertEquals(2,pieza_t.getValue());
+        /*Ahora Roto a la derecha */
+        pieza_t.rotate_right();
+        char[][] k9= pieza_t.getPiecet();
+        /*Compruebo matriz  con t pos normal*/
+        assertEquals('.', k9[0][0]);
+        assertEquals('.', k9[0][1]);
+        assertEquals('.', k9[1][1]);
+        assertEquals('.', k9[0][2]);
+        /*Compruebo valor */
+        assertEquals(1,pieza_t.getValue());}
 }
     
     

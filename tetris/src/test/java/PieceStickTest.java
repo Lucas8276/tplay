@@ -13,6 +13,7 @@ public class PieceStickTest {
         /*Compruebo Matriz*/
         assertEquals('.',p2[0][0]);
         assertEquals('.',p2[1][0]);
+        
         assertEquals('.',p2[2][0]);
         assertEquals('.',p2[3][0]);
         /*Compruebo valor */

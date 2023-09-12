@@ -56,13 +56,13 @@ public class Piecet {
         piecet= t5;
         value=4;
         break;
-        /*t de nuevo en posicion normal */
+        //T vuelve a pos normal
         case 4:
         char[][] t6 = new char[4][4];
         t6[0][0] = '.';
         t6[0][1] = '.';
-        t6[1][1] = '.';
         t6[0][2] = '.';
+        t6[1][1] = '.';
         piecet= t6;
         value=1;
         break;
@@ -78,10 +78,10 @@ public class Piecet {
         t3[2][2]= '.';
         t3[1][1]= '.';
         piecet= t3;
-        value=2;
+        value=4;
         break;
         /*t orientada abajo */
-        case 2:
+        case 4:
         char[][] t4 = new char[4][4];
         t4[1][0] = '.';
         t4[1][1] = '.';
@@ -98,10 +98,10 @@ public class Piecet {
         t5[2][0] = '.';
         t5[1][1] = '.';
         piecet= t5;
-        value=4;
+        value=2;
         break;
         /*t de nuevo en posicion normal */
-        case 4:
+        case 2:
         char[][] t6 = new char[4][4];
         t6[0][0] = '.';
         t6[0][1] = '.';
