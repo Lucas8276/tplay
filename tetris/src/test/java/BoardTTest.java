@@ -52,6 +52,9 @@ public class BoardTTest {
         }
     }
 
+    /**
+     * 
+     */
     @Test
 public void testAgregarMatrizAleatoria() {
     int[][] matrix10x20 = Board.crearMatriz10x20();
@@ -78,6 +81,10 @@ public void testAgregarMatrizAleatoria() {
         if (found) break;
     }
 
-    assertTrue(found);
+    extracted(found);
 }
+
+    private void extracted(boolean found) {
+        assertTrue(found);
+    }
 }
