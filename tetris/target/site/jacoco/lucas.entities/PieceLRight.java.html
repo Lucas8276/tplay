@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PieceLRight.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Tetris</a> &gt; <a href="index.source.html" class="el_package">lucas.entities</a> &gt; <span class="el_source">PieceLRight.java</span></div><h1>PieceLRight.java</h1><pre class="source lang-java linenums">package lucas.entities;
+
+public class PieceLRight {
+private char[][]l_right;
+private int value_right;
+<span class="fc" id="L6">public PieceLRight(){</span>
+<span class="fc" id="L7">    l_right=new char[4][4];</span>
+        //Rellena la matriz
+<span class="fc bfc" id="L9" title="All 2 branches covered.">        for (int i = 0; i &lt; 4; i++) {</span>
+<span class="fc bfc" id="L10" title="All 2 branches covered.">        for (int j = 0; j &lt; 4; j++) {</span>
+<span class="fc" id="L11">        l_right[i][j] = 0;</span>
+                    }
+            }
+        // Dibuja la pieza en forma de &quot;l&quot;horientado a la izquierda&quot;
+<span class="fc" id="L15">        l_right[0][3] = '.';</span>
+<span class="fc" id="L16">        l_right[1][3] = '.';</span>
+<span class="fc" id="L17">        l_right[2][3] = '.';</span>
+<span class="fc" id="L18">        l_right[2][2] = '.';</span>
+        
+        //Valor de L-right
+<span class="fc" id="L21">        value_right=0;</span>
+<span class="fc" id="L22">}</span>
+public char[][]getl_right(){
+<span class="fc" id="L24">    return l_right;</span>
+}
+public int getValue_right(){
+<span class="fc" id="L27">    return value_right;</span>
+}
+public void rotate_left(){
+<span class="pc bpc" id="L30" title="1 of 5 branches missed.">    switch(value_right){</span>
+            //L mirando abajo
+            case 0:
+<span class="fc" id="L33">            char[][] t1=new char[4][4];</span>
+<span class="fc" id="L34">            t1[0][1] = '.';</span>
+<span class="fc" id="L35">            t1[0][2] = '.';</span>
+<span class="fc" id="L36">            t1[0][3] = '.';</span>
+<span class="fc" id="L37">            t1[1][3] = '.';</span>
+<span class="fc" id="L38">            value_right=1;</span>
+<span class="fc" id="L39">            l_right=t1;</span>
+<span class="fc" id="L40">            break;</span>
+            //L mirando al costado
+            case 1:
+<span class="fc" id="L43">            char[][] t2=new char[4][4];</span>
+<span class="fc" id="L44">            t2[0][2] = '.';</span>
+<span class="fc" id="L45">            t2[1][2] = '.';</span>
+<span class="fc" id="L46">            t2[2][2] = '.';</span>
+<span class="fc" id="L47">            t2[0][3] = '.';</span>
+<span class="fc" id="L48">            value_right=2;</span>
+<span class="fc" id="L49">            l_right=t2;</span>
+<span class="fc" id="L50">            break;</span>
+            //L mirando arriba
+            case 2:
+<span class="fc" id="L53">            char[][] t3=new char[4][4];</span>
+<span class="fc" id="L54">            t3[0][1] = '.';</span>
+<span class="fc" id="L55">            t3[1][1] = '.';</span>
+<span class="fc" id="L56">            t3[1][2] = '.';</span>
+<span class="fc" id="L57">            t3[1][3] = '.';</span>
+<span class="fc" id="L58">            value_right=3;</span>
+<span class="fc" id="L59">            l_right=t3;</span>
+<span class="fc" id="L60">            break;</span>
+            
+            //L de nuevo normal
+            case 3:
+<span class="fc" id="L64">            char[][] l2= new char[4][4];</span>
+<span class="fc" id="L65">            l2[0][3] = '.';</span>
+<span class="fc" id="L66">            l2[1][3] = '.';</span>
+<span class="fc" id="L67">            l2[2][3] = '.';</span>
+<span class="fc" id="L68">            l2[2][2] = '.';</span>
+<span class="fc" id="L69">            value_right=0;</span>
+<span class="fc" id="L70">            l_right=l2;</span>
+            break;
+            }
+<span class="fc" id="L73">        }</span>
+        public void rotate_right(){
+<span class="pc bpc" id="L75" title="1 of 5 branches missed.">            switch(value_right){</span>
+                    //L 
+                    case 0:
+<span class="fc" id="L78">                    char[][] t1=new char[4][4];</span>
+<span class="fc" id="L79">                    t1[0][1] = '.';</span>
+<span class="fc" id="L80">                    t1[1][1] = '.';</span>
+<span class="fc" id="L81">                    t1[1][2] = '.';</span>
+<span class="fc" id="L82">                    t1[1][3] = '.';</span>
+<span class="fc" id="L83">                    value_right=3;</span>
+<span class="fc" id="L84">                    l_right=t1;</span>
+<span class="fc" id="L85">                    break;</span>
+                    //L mirando al costado
+                    case 3:
+<span class="fc" id="L88">                    char[][] t2=new char[4][4];</span>
+<span class="fc" id="L89">                    t2[0][3] = '.';</span>
+<span class="fc" id="L90">                    t2[0][2] = '.';</span>
+<span class="fc" id="L91">                    t2[1][2] = '.';</span>
+<span class="fc" id="L92">                    t2[2][2] = '.';</span>
+<span class="fc" id="L93">                    value_right=2;</span>
+<span class="fc" id="L94">                    l_right=t2;</span>
+<span class="fc" id="L95">                    break;</span>
+                    //L mirando arriba
+                    case 2:
+<span class="fc" id="L98">                    char[][] t3=new char[4][4];</span>
+<span class="fc" id="L99">                    t3[0][1] = '.';</span>
+<span class="fc" id="L100">                    t3[0][2] = '.';</span>
+<span class="fc" id="L101">                    t3[0][3] = '.';</span>
+<span class="fc" id="L102">                    t3[1][3] = '.';</span>
+<span class="fc" id="L103">                    value_right=1;</span>
+<span class="fc" id="L104">                    l_right=t3;</span>
+<span class="fc" id="L105">                    break;</span>
+                    
+                    //L de nuevo normal
+                    case 1:
+<span class="fc" id="L109">                    char[][] l2= new char[4][4];</span>
+<span class="fc" id="L110">                    l2[0][3] = '.';</span>
+<span class="fc" id="L111">                    l2[1][3] = '.';</span>
+<span class="fc" id="L112">                    l2[2][3] = '.';</span>
+<span class="fc" id="L113">                    l2[2][2] = '.';</span>
+<span class="fc" id="L114">                    value_right=0;</span>
+<span class="fc" id="L115">                    l_right=l2;</span>
+                    break;
+                    }
+<span class="fc" id="L118">            }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.3.201901230119</span></div></body></html>

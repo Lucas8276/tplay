@@ -1,0 +1,11 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+Tetris,lucas.entities,Board,213,1359,23,41,37,46,20,20,5,3
+Tetris,lucas.entities,PieceLLeft,0,352,2,12,0,79,2,13,0,5
+Tetris,lucas.entities,PieceDogLeft,0,212,2,8,0,47,2,9,0,5
+Tetris,lucas.entities,Tetris,0,3,0,0,0,1,0,1,0,1
+Tetris,lucas.entities,PieceSquare,0,179,2,4,0,40,2,7,0,5
+Tetris,lucas.entities,PieceStick,0,212,2,8,0,47,2,9,0,5
+Tetris,lucas.entities,PieceBase,16,0,2,0,7,0,6,0,5,0
+Tetris,lucas.entities,PieceDogRight,0,212,2,8,0,47,2,9,0,5
+Tetris,lucas.entities,Piecet,0,352,2,12,0,79,2,13,0,5
+Tetris,lucas.entities,PieceLRight,0,352,2,12,0,79,2,13,0,5

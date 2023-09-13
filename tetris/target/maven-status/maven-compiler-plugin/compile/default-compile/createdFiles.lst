@@ -1,0 +1,11 @@
+lucas\entities\PieceLRight.class
+lucas\entities\PieceBase.class
+lucas\entities\PieceLLeft.class
+lucas\entities\PieceDogRight.class
+lucas\entities\PieceSquare.class
+lucas\entities\PieceDogLeft.class
+lucas\entities\Tetris.class
+lucas\entities\PieceStick.class
+lucas\entities\Board.class
+lucas\interfaces\IRotator.class
+lucas\entities\Piecet.class
