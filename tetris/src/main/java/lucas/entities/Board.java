@@ -61,7 +61,7 @@ public class Board {
     }
 
     // Método para agregar una matriz 4x4 existente en una posición aleatoria
-    public static void agregarMatrizAleatoria(int[][] matrix10x20, int[][] matrix4x4) {
+    public static void agregarMatrizAleatoria(int[][] matrix10x20, int[][] pieceLIzquierda2) {
         Random random = new Random();
         int startX = random.nextInt(9);  // Rango de 0 a 9 para evitar desbordar la matriz
         int startY = random.nextInt(19); // Rango de 0 a 19
@@ -69,7 +69,7 @@ public class Board {
         // Verificar que la matriz 4x4 cabe en la matriz 10x20
         if (startX + 2 < 5 && startY + 2 < 4) {
             for (int i = 0; i < 4; i++) {
-                System.arraycopy(matrix4x4[i], 0, matrix10x20[startX + i], startY, 4);
+                System.arraycopy(pieceLIzquierda2[i], 0, matrix10x20[startX + i], startY, 4);
             }
         } else {
             System.out.println("La matriz 4x4 no cabe en la matriz 10x20 en esta posición.");
@@ -78,7 +78,7 @@ public class Board {
 
         if (startX + 2 < 9 && startY + 2 < 4) {
             for (int i = 0; i < 4; i++) {
-                System.arraycopy(matrix4x4[i], 0, matrix10x20[startX + i], startY, 4);
+                System.arraycopy(pieceLIzquierda2[i], 0, matrix10x20[startX + i], startY, 4);
             }
         } else {
             System.out.println("La matriz 4x4 no cabe en la matriz 10x20 en esta posición.");
@@ -87,7 +87,7 @@ public class Board {
 
         if (startX + 2 < 5 && startY + 2 < 8) {
             for (int i = 0; i < 4; i++) {
-                System.arraycopy(matrix4x4[i], 0, matrix10x20[startX + i], startY, 4);
+                System.arraycopy(pieceLIzquierda2[i], 0, matrix10x20[startX + i], startY, 4);
             }
         } else {
             System.out.println("La matriz 4x4 no cabe en la matriz 10x20 en esta posición.");
@@ -96,7 +96,7 @@ public class Board {
 
         if (startX + 2 < 9 && startY + 2 < 4) {
             for (int i = 0; i < 4; i++) {
-                System.arraycopy(matrix4x4[i], 0, matrix10x20[startX + i], startY, 4);
+                System.arraycopy(pieceLIzquierda2[i], 0, matrix10x20[startX + i], startY, 4);
             }
         } else {
             System.out.println("La matriz 4x4 no cabe en la matriz 10x20 en esta posición.");
@@ -105,7 +105,7 @@ public class Board {
 
         if (startX + 2 < 5 && startY + 2 < 4) {
             for (int i = 0; i < 4; i++) {
-                System.arraycopy(matrix4x4[i], 0, matrix10x20[startX + i], startY, 4);
+                System.arraycopy(pieceLIzquierda2[i], 0, matrix10x20[startX + i], startY, 4);
             }
         } else {
             System.out.println("La matriz 4x4 no cabe en la matriz 10x20 en esta posición.");
@@ -114,7 +114,7 @@ public class Board {
 
         if (startX + 2 < 9 && startY + 2 < 12) {
             for (int i = 0; i < 4; i++) {
-                System.arraycopy(matrix4x4[i], 0, matrix10x20[startX + i], startY, 4);
+                System.arraycopy(pieceLIzquierda2[i], 0, matrix10x20[startX + i], startY, 4);
             }
         } else {
             System.out.println("La matriz 4x4 no cabe en la matriz 10x20 en esta posición.");
@@ -123,7 +123,7 @@ public class Board {
 
         if (startX + 2 < 5 && startY + 2 < 4) {
             for (int i = 0; i < 4; i++) {
-                System.arraycopy(matrix4x4[i], 0, matrix10x20[startX + i], startY, 4);
+                System.arraycopy(pieceLIzquierda2[i], 0, matrix10x20[startX + i], startY, 4);
             }
         } else {
             System.out.println("La matriz 4x4 no cabe en la matriz 10x20 en esta posición.");
@@ -132,7 +132,7 @@ public class Board {
 
         if (startX + 2 < 9 && startY + 2 < 16) {
             for (int i = 0; i < 4; i++) {
-                System.arraycopy(matrix4x4[i], 0, matrix10x20[startX + i], startY, 4);
+                System.arraycopy(pieceLIzquierda2[i], 0, matrix10x20[startX + i], startY, 4);
             }
         } else {
             System.out.println("La matriz 4x4 no cabe en la matriz 10x20 en esta posición.");
@@ -141,7 +141,7 @@ public class Board {
 
         if (startX + 2 < 5 && startY + 2 < 4) {
             for (int i = 0; i < 4; i++) {
-                System.arraycopy(matrix4x4[i], 0, matrix10x20[startX + i], startY, 4);
+                System.arraycopy(pieceLIzquierda2[i], 0, matrix10x20[startX + i], startY, 4);
             }
         } else {
             System.out.println("La matriz 4x4 no cabe en la matriz 10x20 en esta posición.");
@@ -150,7 +150,7 @@ public class Board {
 
         if (startX + 2 < 9 && startY + 2 < 20) {
             for (int i = 0; i < 4; i++) {
-                System.arraycopy(matrix4x4[i], 0, matrix10x20[startX + i], startY, 4);
+                System.arraycopy(pieceLIzquierda2[i], 0, matrix10x20[startX + i], startY, 4);
             }
         } else {
             System.out.println("La matriz 4x4 no cabe en la matriz 10x20 en esta posición.");
@@ -173,6 +173,9 @@ public class Board {
 
     public static int[][] crearMatriz4x4() {
         return new int[4][4];
+    }
+
+    public static void agregarMatrizAleatoria(int[][] matrix10x20, int length) {
     }
 }
 
