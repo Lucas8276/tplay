@@ -55,7 +55,7 @@ public class PieceStickTest {
         assertEquals(1,p1.getValue());
 
         /*Ahora Roto a la izquierda */
-        p1.rotate_left();;
+        p1.rotate_right();
         char[][] k2= p1.getPieceS();
         /*Compruebo matriz */
         assertEquals('.', k2[0][0]);
@@ -66,7 +66,7 @@ public class PieceStickTest {
         assertEquals(2,p1.getValue());
 
         /*Ahora Roto a la izquierda */
-        p1.rotate_left();;
+        p1.rotate_right();;
         char[][] k3= p1.getPieceS();
         /*Compruebo matriz */
         assertEquals('.', k3[0][0]);
