@@ -59,8 +59,7 @@ public class BoardTTest {
 public void testAgregarMatrizAleatoria() {
     int[][] matrix10x20 = Board.crearMatriz10x20();
     Board.agregarMatrizAleatoria(matrix10x20, Board.PieceDogDerecha);
-
-    boolean found = false;
+j    boolean found = false;
     for (int i = 0; i < matrix10x20.length - 3; i++) {
         for (int j = 0; j < matrix10x20[0].length - 3; j++) {
             boolean match = true;

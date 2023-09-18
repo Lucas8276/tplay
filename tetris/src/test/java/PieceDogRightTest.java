@@ -1,6 +1,8 @@
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.Test;
 
@@ -111,4 +113,15 @@ public class PieceDogRightTest{
         assertEquals(1,p1.getValuer());
     }
 
+@Test
+public void test_stream_filter_count(){
+   List<PieceDogRight> ListaPerros = new ArrayList<>();
+   for(int i=0; i<100;i++){
+    PieceDogRight piezachilling = new PieceDogRight();
+    ListaPerros.add(piezachilling);
+    
+   }
+
+
+}
 }
