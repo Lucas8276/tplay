@@ -1,9 +1,14 @@
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Predicate;
 
 import org.junit.Test;
 
+import lucas.entities.PieceDogRight;
 import lucas.entities.Piecet;
 public class PieceTTest {
     
@@ -127,6 +132,39 @@ public class PieceTTest {
         assertEquals('.', k9[0][2]);
         /*Compruebo valor */
         assertEquals(1,pieza_t.getValue());}
+    
+@Test
+public void test_stream_filter_count(){
+   List<Piecet> ListaPerros = new ArrayList<>();
+   for(int i=0; i<10;i++){
+    Piecet piezachilling = new Piecet();
+    piezachilling.rotate_right();
+    assertEquals(4,piezachilling.getValue());
+    ListaPerros.add(piezachilling);
+   }
+   for(int i=10; i<100;i++){
+    Piecet piezachilling = new Piecet();
+    piezachilling.rotate_left();
+    assertEquals(2,piezachilling.getValue());
+    ListaPerros.add(piezachilling);
+    }
+    assertNotNull(ListaPerros);
+    long cantidad= ListaPerros.stream()
+                    .count();
+    assertEquals(100, cantidad);
+    Predicate<Piecet> esta_a_la_derecha= piezan -> piezan.getValue()==4;
+    long cantidadpiezasderechas= ListaPerros.stream()
+                                .filter(esta_a_la_derecha)
+                                .count();
+    assertEquals(10,cantidadpiezasderechas);
+    Predicate<Piecet> esta_a_la_izq= piezana -> piezana.getValue()==2;
+    long cantidadpiezasizquierda= ListaPerros.stream()
+                                    .filter(esta_a_la_izq)
+                                    .count();
+    assertEquals(90,cantidadpiezasizquierda);
+  
+    
+    }
 }
     
     

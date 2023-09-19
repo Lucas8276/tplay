@@ -113,15 +113,5 @@ public class PieceDogRightTest{
         assertEquals(1,p1.getValuer());
     }
 
-@Test
-public void test_stream_filter_count(){
-   List<PieceDogRight> ListaPerros = new ArrayList<>();
-   for(int i=0; i<100;i++){
-    PieceDogRight piezachilling = new PieceDogRight();
-    ListaPerros.add(piezachilling);
-    
-   }
 
-
-}
 }
